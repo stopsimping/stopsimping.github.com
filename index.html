@@ -9,5 +9,18 @@
 </html>
 
 <body>
+    <div class="background" style="display: none;">
+        <div id="pattern"></div>
+  
+        <audio id="audio" loop="">
+          <source src="assets/others/KUSO GVKI - Cinnamon (feat. Apfel) (splash! Mag Premiere).mp4" type="audio/mp4" />
+          <script>
+            const audio = document.getElementById('audio');
+  
+            app.audioElement = audio;
+            app.audioElement.volume = 0;
+          </script>
+        </audio>
+     </div>
      <script src="/assets/js/app.js"></script>
 </body>
