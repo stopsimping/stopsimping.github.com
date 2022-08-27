@@ -31,3 +31,33 @@ function color(name, string) {
         return string;
     }
 }
+
+function showsite() {
+    this.hide();
+}
+
+function wait(timeout) {
+    return new Promise(resolve => {
+        setTimeout(resolve, timeout);
+    });
+}
+
+$(document).ready(function(){
+    $("#entertxt").on('click', function(){
+        var audio = document.getElementById("audio");
+        audio.play();
+        audio.volume = 0.50;
+        audio.loop = true;
+        document.getElementById("entertxt").className = 'animate__animated animate__flash';
+        setTimeout(function () {
+            $( "#entertxt" ).fadeOut( "slow", function() {
+                // Animation complete.
+              });
+              
+            $( "#enter" ).fadeOut( "slow", function() {
+                // Animation complete.
+              });
+        }, 3500); // 3500
+        
+        });
+});
