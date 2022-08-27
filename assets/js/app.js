@@ -2,6 +2,11 @@
 
 var path = '~';
 
+let dirs = {
+    'root': ['secret.txt'],
+    'repos': ['chad-qui-prend', 'solidity-sc', 'DeluxeSweeper'],
+}
+
 var term = $('body').terminal({
 
     help: function() {
@@ -11,11 +16,24 @@ var term = $('body').terminal({
         cd      change directory
         github  get my github link
         stop    stop the music
-        clear   what do you need to know?`);
+        clear   what do you need to know?
+        cat     print the content of a file`);
     },
 
     ls: function() {
-        this.echo("not implemented yet");
+        let output = ""
+        for (const dir of Object.keys(dirs)) {
+            if(dir === "root") {
+                this.echo(`${color('red', dir)}    `, {newline: false});
+            }
+            
+            else {
+                this.echo(`${color('blue', dir)}    `, {newline: false});
+            }
+            
+            this.echo('\r');
+        }
+        
     },
 
     cd: function(new_path) {
@@ -72,3 +90,16 @@ $(document).ready(function(){
         }, 3500); 
     });
 });
+
+String.prototype.padding = function(n, c)
+{
+        var val = this.valueOf();
+        if ( Math.abs(n) <= val.length ) {
+                return val;
+        }
+        var m = Math.max((Math.abs(n) - this.length) || 0, 0);
+        var pad = Array(m + 1).join(String(c || ' ').charAt(0));
+//      var pad = String(c || ' ').charAt(0).repeat(Math.abs(n) - this.length);
+        return (n < 0) ? pad + val : val + pad;
+//      return (n < 0) ? val + pad : pad + val;
+};
