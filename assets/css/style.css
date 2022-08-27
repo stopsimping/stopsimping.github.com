@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+
+:root {
+  --size: 1.4;
+}
+
+.terminal {
+  --color: green;
+  --link-color: darkblue;
+  --animation: terminal-glow;
+  --glow: 1;
+}
+
+.cmd-cursor {
+  --original-color: green;
+}
