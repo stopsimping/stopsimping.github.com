@@ -1,2 +1,5 @@
 # stopsimping.github.io
-11111
+
+## Thanks to
+- Animated.css
+- JQuery Terminal
