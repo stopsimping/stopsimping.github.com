@@ -1,6 +1,6 @@
 // https://codepen.io/jcubic/pen/jOaoGKJ?editors=0010
 
-var path = '~/';
+var path = '~';
 
 var term = $('body').terminal({
     set(new_path) {
