@@ -3,10 +3,37 @@
 var path = '~';
 
 var term = $('body').terminal({
-    set(new_path) {
+
+    help: function() {
+        this.echo(`Usage : command [arg, arg1...]    
+        help    print every commands
+        ls      print every files in the directory
+        cd      change directory
+        github  get my github link
+        stop    stop the music
+        clear   what do you need to know?`);
+    },
+
+    ls: function() {
+        this.echo("not implemented yet");
+    },
+
+    cd: function(new_path) {
+        // if not in folders
         path = new_path;
         Promise.resolve().then(() => console.log($('.terminal-output').html().replace(/<[^>]+>/g, '')));
+    },
+
+    github: function() {
+        this.echo($('<h>Github link : </h> <a href="https://github.com/stopsimping">click here</a>'));
+    },
+
+    stop: function() {
+        var audio = document.getElementById("audio");
+        audio.pause();
+        this.echo("audio paused successfully");
     }
+
 }, {
     greetings: "      _                       _                    _               \r\n     | |                     (_)                  (_)              \r\n ___ | |_   ___   _ __   ___  _  _ __ ___   _ __   _  _ __    __ _ \r\n\/ __|| __| \/ _ \\ | \'_ \\ \/ __|| || \'_ ` _ \\ | \'_ \\ | || \'_ \\  \/ _` |\r\n\\__ \\| |_ | (_) || |_) |\\__ \\| || | | | | || |_) || || | | || (_| |\r\n|___\/ \\__| \\___\/ | .__\/ |___\/|_||_| |_| |_|| .__\/ |_||_| |_| \\__, |\r\n                 | |                       | |                __\/ |\r\n                 |_|                       |_|               |___\/ \r",
     prompt() {
@@ -32,16 +59,6 @@ function color(name, string) {
     }
 }
 
-function showsite() {
-    this.hide();
-}
-
-function wait(timeout) {
-    return new Promise(resolve => {
-        setTimeout(resolve, timeout);
-    });
-}
-
 $(document).ready(function(){
     $("#entertxt").on('click', function(){
         var audio = document.getElementById("audio");
@@ -50,14 +67,8 @@ $(document).ready(function(){
         audio.loop = true;
         document.getElementById("entertxt").className = 'animate__animated animate__flash';
         setTimeout(function () {
-            $( "#entertxt" ).fadeOut( "slow", function() {
-                // Animation complete.
-              });
-              
-            $( "#enter" ).fadeOut( "slow", function() {
-                // Animation complete.
-              });
-        }, 3500); // 3500
-        
-        });
+            $( "#entertxt" ).fadeOut( "slow", function() {});
+            $( "#enter" ).fadeOut( "slow", function() {});
+        }, 3500); 
+    });
 });
