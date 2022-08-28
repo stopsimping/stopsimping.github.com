@@ -93,7 +93,7 @@ var term = $('body').terminal({
     },
 
     topg: function() {
-        this.echo($('<h>Github link : </h> <a href="https://github.com/stopsimping">click here</a>'));
+        this.echo(`${color('yellow', 'under construction... stay tuned!')}`);
     },
 
     escape: function() {
@@ -144,7 +144,7 @@ var term = $('body').terminal({
     }
 
 }, {
-    greetings: "      _                       _                    _               \r\n     | |                     (_)                  (_)              \r\n ___ | |_   ___   _ __   ___  _  _ __ ___   _ __   _  _ __    __ _ \r\n\/ __|| __| \/ _ \\ | \'_ \\ \/ __|| || \'_ ` _ \\ | \'_ \\ | || \'_ \\  \/ _` |\r\n\\__ \\| |_ | (_) || |_) |\\__ \\| || | | | | || |_) || || | | || (_| |\r\n|___\/ \\__| \\___\/ | .__\/ |___\/|_||_| |_| |_|| .__\/ |_||_| |_| \\__, |\r\n                 | |                       | |                __\/ |\r\n                 |_|                       |_|               |___\/ \r",
+    greetings: `${color('yellow', "         _nnnn_\r\n        dGGGGMMb\r\n       @p~qp~~qMb\r\n       M|@||@) M|            _                       _                    _               \r\n       @,----.JM|           | |                     (_)                  (_)              \r\n      JS^\\__\/  qKL      ___ | |_   ___   _ __   ___  _  _ __ ___   _ __   _  _ __    __ _ \r\n     dZP        qKRb   \/ __|| __| \/ _ \\ | \'_ \\ \/ __|| || \'_ ` _ \\ | \'_ \\ | || \'_ \\  \/ _` |\r\n    dZP          qKKb  \\__ \\| |_ | (_) || |_) |\\__ \\| || | | | | || |_) || || | | || (_| |\r\n   fZP            SMMb |___\/ \\__| \\___\/ | .__\/ |___\/|_||_| |_| |_|| .__\/ |_||_| |_| \\__, |\r\n   HZM            MMMM                  | |                       | |                __\/ |\r\n   FqM            MMMM                  |_|                       |_|               |___\/ \r\n __| \".        |\\dS\"qML\t\t           keep grinding topg\'s \u00A9 2022-2023\r\n |    `.       | `\' \\Zq\r\n_)      \\.___.,|     .\'\r\n\\____   )MMMMMP|   .\'\r\n     `-\'       `--\' ")}`,
     prompt() {
         return `┌──(${color('green', `${user}@github-io`)})-[${color('blue', path)}]
 └─\$ `;
