@@ -9,6 +9,7 @@ let dirs = {
     'repos': ['private', 'chad-qui-prend', 'solidity-sc', 'DeluxeSweeper'],
 }
 
+
 var term = $('body').terminal({
 
     help: function() {
@@ -21,7 +22,8 @@ var term = $('body').terminal({
         clear    what do you need to know?
         cat      print the content of a file
         su       get root access
-        escape   escape from the matrix`);
+        escape   escape from the matrix
+        topg     become a top g in multiple areas of life`);
     },
 
     ls: function() {
@@ -87,6 +89,10 @@ var term = $('body').terminal({
     },
 
     github: function() {
+        this.echo($('<h>Github link : </h> <a href="https://github.com/stopsimping">click here</a>'));
+    },
+
+    topg: function() {
         this.echo($('<h>Github link : </h> <a href="https://github.com/stopsimping">click here</a>'));
     },
 
