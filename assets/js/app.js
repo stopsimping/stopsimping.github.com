@@ -127,7 +127,7 @@ var term = $('body').terminal({
         // convert bytes to hex string                  
         const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-        if (hashHex != "6b653a069f84e0b2822aede3317f4856b358b83c27eac665e2820106e83a5d9a") {
+        if (hashHex != "b7200eab918db4b067d127adc58160b0df6bf1797d3c9db5d597172c7c4115a8") {
             this.echo(`${color('red', "wrong password, try again...")}`);
         }
 
