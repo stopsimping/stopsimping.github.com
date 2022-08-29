@@ -171,7 +171,7 @@ function color(name, string) {
 $(document).ready(function(){
     $("#entertxt").on('click', function(){
         
-        document.getElementById('audio-player').innerHTML = `<audio id="audio" src="../others/audio${Math.floor(Math.random() * 4)}.mp3/"></audio>`;
+        document.getElementById('audio-player').innerHTML = `<audio id="audio" src="../others/audio${Math.floor(Math.random() * 4)}.mp3"></audio>`;
         var audio = document.getElementById("audio");
         audio.play();
         audio.volume = 0.10;
