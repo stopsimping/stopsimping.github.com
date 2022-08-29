@@ -7,7 +7,6 @@
   --link-color: darkblue;
   --animation: terminal-glow;
   --glow: 1;
-  background-image: url('/assets/others/background.png');
 }
 
 .cmd-cursor {
