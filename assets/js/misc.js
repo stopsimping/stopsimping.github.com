@@ -4,7 +4,6 @@ const titles = ['stopsimping', 'free andrew tate', 'become a top g', 'keep grind
 class _misc {
     titleChanger = (text, delay) => {
         if (!text) return;
-        console.log("lol");
         delay = delay || 2500;
         let counter = 0;
 
