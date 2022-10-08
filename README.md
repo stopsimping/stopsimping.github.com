@@ -1,4 +1,4 @@
-# stopsimping.github.io
+# stoptexting.github.io
 
 ## Thanks to
 - Animated.css
